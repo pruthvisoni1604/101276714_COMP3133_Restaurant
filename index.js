@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const employeeRouter = require('./routes/EmployeeRoutes.js');
+const restaurantRouter = require('./routes/RestaurantRoutes.js');
 
 const app = express();
 app.use(express.json()); // Make sure it comes back as json
@@ -15,6 +15,6 @@ mongoose.connect('mongodb+srv://gbc:pruthvi@sa.dubue.mongodb.net/db_f2021_comp31
   console.log('Error Mongodb connection')
 });
 
-app.use(employeeRouter);
+app.use(restaurantRouter);
 
-app.listen(8081, () => { console.log('Server is running...') });
+app.listen(3000, () => { console.log('Server is running...') });
